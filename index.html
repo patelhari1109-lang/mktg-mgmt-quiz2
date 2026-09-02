@@ -311,20 +311,25 @@ h1.tt{font-size:26px;margin:0 0 4px;font-weight:700}
 
 <script>
 /* =========================================================================
-   MARKETING MANAGEMENT — QUIZ II
+   MARKETING MANAGEMENT — QUIZ II  ·  case paper
    Source: MM101 Sessions 8-12 — the material after Quiz I.
-           Sessions 8-9  Brand, and the 6P marketing mix (Surf excel worked
-                         through in full); Proposition; the four levels of
-                         Product; Price and RPI; Packaging.
-           Session 10    Product Mix — features / performance / design,
-                         blind tests, product hierarchy, demand spaces.
+           Sessions 8-9   Brand, and the 6P marketing mix; Proposition; the
+                          four levels of Product; Price and RPI; Packaging.
+           Session 10     Product Mix — features / performance / design,
+                          blind tests, product hierarchy, demand spaces.
            Sessions 11-12 Pack-Price Architecture — the price ladder, pack
-                         profitability, SOR, recruit & uptrade, shopper
-                         missions, channels.
-   Sessions 1-6 (5 Cs, segmentation, targeting, positioning) were the ground
-   Quiz I covered, so they are referenced in the Why panels rather than
-   re-tested here.
-   Level is deliberately low-to-moderate, matching the Quiz I paper.
+                          profitability, SOR, recruit & uptrade, shopper
+                          missions, channels.
+   Sessions 1-6 (5 Cs, segmentation, targeting, positioning) were Quiz I's
+   ground, so they are referenced in the Why panels rather than re-tested.
+
+   FORMAT: every question is a case. A situation, a decision or a claim is
+   put on the table and you have to say what is actually going on — which is
+   the same shape as the Quiz I paper (the Cult.Fit ad, the segment tables,
+   the positioning map). The brands are invented — Lather, Silk and Purely
+   in shampoo, CrunchLab in protein bars — so nothing depends on outside
+   knowledge; the frameworks carry every answer.
+
    The correct option is always authored FIRST in `opts`; positions are
    reshuffled on every attempt.
    ========================================================================= */
@@ -336,212 +341,231 @@ const rnd=a=>a[Math.floor(Math.random()*a.length)];
 
 /* ---------------- topics ---------------- */
 const TOPICS=[
- {id:'brand', name:'Brand & the 6P Mix',      kick:'what a brand is · marketing mix'},
- {id:'mix',   name:'Proposition, Product, Price', kick:'product levels · RPI', hot:true},
- {id:'pmix',  name:'Product Mix',             kick:'quality · demand spaces'},
- {id:'pack',  name:'Pack-Price Architecture', kick:'price ladder · recruit & uptrade', hot:true},
+ {id:'brand', name:'Brand & the 6P Mix',      kick:'diagnose the mix · Lather'},
+ {id:'mix',   name:'Proposition, Product, Price', kick:'product levels · RPI calls', hot:true},
+ {id:'pmix',  name:'Product Mix',             kick:'blind tests · demand spaces'},
+ {id:'pack',  name:'Pack-Price Architecture', kick:'ladders · recruit & uptrade', hot:true},
 ];
 
 /* ---------------- the quiz ----------------
+   Every question is a case: a situation, a decision or a claim on the table,
+   and you have to say what is actually going on. The brands are invented —
+   Lather, Silk, Purely (shampoo) and CrunchLab (protein bars) — so nothing
+   turns on outside knowledge; everything turns on the frameworks.
+
    t=topic, tag=concept|apply|case|calc, diff, trap=true (marked tricky),
    given=[chips], q=stem, opts=[correct, ...distractors], why=explanation
    Correct option is always authored FIRST; positions reshuffle every attempt. */
 const QUIZ=[
 
 /* ============ 01 · BRAND & THE 6P MIX ============ */
-{t:'brand',tag:'concept',diff:'easy',
- q:'Session 8 quotes <b>Keller (1998)</b> on what a brand is. Which is that definition?',
- opts:['A set of mental associations held by the consumer, which add to the perceived value of the product or service',
-       'The registered name, logo and trademark that legally protect a product from being copied',
-       'The total a company has spent on advertising over the years, accumulated as goodwill',
-       'The physical product together with its packaging — everything the consumer actually receives'],
- why:'The deck gives <b>two</b> definitions and they do different jobs. The first is structural — a brand is <i>“a sign or set of signs certifying the origin of a product or service and differentiating it from the competition”</i>. Keller’s is the one that matters for marketing: a brand is <b>a set of mental associations held by the consumer, which add to the perceived value</b>. Note where the brand lives — in the consumer’s head, not on the shelf and not in the trademark registry. That is exactly why the next slide says a <b>“name” becomes a “brand”</b> only once it has <b>meaning, saliency, differentiability and trust</b>: all four are things the consumer has to hold, not things the company can file for.'},
-
-{t:'brand',tag:'concept',diff:'easy',
- q:'The deck says a <b>“name” becomes a “brand”</b> only when it acquires four things. Which four?',
- opts:['Meaning, saliency, differentiability and trust',
-       'A logo, a tagline, a jingle and a mascot',
-       'Awareness, distribution, a price premium and market share',
-       'A trademark, a patent, a domain name and a social media handle'],
- why:'<b>Meaning</b> — the name stands for something. <b>Saliency</b> — it comes to mind in the category. <b>Differentiability</b> — it is not interchangeable with the next name on the shelf. <b>Trust</b> — the consumer believes it will deliver. The other three options are all <i>assets or outcomes</i> a brand may have; none of them is what turns a name into a brand. A logo and a jingle are identity devices, share and distribution are results, and a trademark is a legal registration — a company can own every one of those and still have a name nobody attaches meaning to. Tie this back to the brand’s biggest challenge, which the deck poses right after: staying differentiated when the category’s products converge.'},
-
-{t:'brand',tag:'concept',diff:'easy',trap:true,
- q:'The course works with a <b>6P</b> marketing mix, not the classic 4Ps. Which set is the course’s six?',
- opts:['Product, Price, Place, Promotion, Packaging, Proposition',
-       'Product, Price, Place, Promotion, Positioning, Profit',
-       'Product, Price, Place, Promotion, People, Process',
-       'Product, Price, Packaging, Promotion, People, Physical evidence'],
- why:'The classic four — Product, Price, Place, Promotion — plus <b>Packaging</b> and <b>Proposition</b>. Two traps to clear:<div class="work">Positioning  ≠ a P  → it sits upstream, in STP\nProposition  = a P  → what the brand stands for, in the mix\nPeople / Process / Physical evidence → the 7P services\n                    extension, not this course’s frame</div>The Positioning/Proposition confusion is the one to watch. <b>Positioning</b> is the STP decision — the unique value you choose to offer a defined target. <b>Proposition</b> is the mix element that carries that decision into execution: what the brand wants to stand for in the consumer’s mind. Also note the Marketing Management Process diagram in every deck — the 6Ps box sits <i>below</i> the STP box, because the mix executes what STP decided.'},
-
-{t:'brand',tag:'concept',diff:'easy',
- q:'The deck calls a brand’s marketing mix its <b>“DNA”</b>. What does that mean?',
- opts:['Every brand makes its own distinct set of choices across the six Ps, and that combination is what makes it recognisably itself',
-       'The mix is fixed at launch and cannot be changed later without relaunching the brand',
-       'The mix is inherited from the parent company, so every brand in a portfolio runs the same mix',
-       'DNA refers to the brand’s legal identity — its name, logo and trademark registrations'],
- why:'“Each brand has its unique DNA — a brand’s unique approach across the 6Ps is called the <b>Marketing Mix</b>.” Two brands can sell chemically similar detergent and still be unmistakably different, because they answer the six questions differently. It is a set of <i>choices</i>, so it can be changed — but the deck’s closing slide adds the constraint: <b>the elements of the mix are inter-related</b>. Move one and the others have to move with it. Take a premium price without a product, pack and promotion that justify it and the mix stops hanging together — the same misalignment failure Quiz I tested between Positioning and the 6Ps.'},
+{t:'brand',tag:'case',diff:'easy',
+ q:'<b>Lather</b> has spent two years discounting hard on quick commerce. Aided awareness is now <b>92%</b>. But in the same survey, most consumers cannot say what Lather stands for, and <b>70% say they would switch for ₹20 less</b>. The founder tells the board: “92% awareness — we are clearly a strong brand now.” What is the honest diagnosis?',
+ opts:['Lather has <b>saliency</b> but none of the other three — no meaning, no differentiability, no trust. Being recognised makes it a well-known <i>name</i>, not yet a brand',
+       '92% awareness clears the bar. The switching number is a Price problem, to be fixed in the Price P, not a brand problem',
+       'It is a strong brand with weak visual identity — the fix is a logo and packaging refresh',
+       'The question cannot be answered until Lather registers its trademark, since a brand is legally the registered sign'],
+ why:'The deck’s test is four-part: a <b>name</b> becomes a <b>brand</b> when it has <b>meaning, saliency, differentiability and trust</b>. Lather has bought exactly one of them. And Keller’s definition tells you why the other three matter commercially — a brand is a set of mental associations that <b>add to the perceived value</b>. If 70% will leave for ₹20, the associations are adding roughly ₹20 of perceived value, which is to say almost none.<br><br>The Price answer inverts cause and effect: price sensitivity that high <i>is</i> the symptom of nothing being built above the product. And a trademark is a legal registration — you can own one and still have a name nobody attaches meaning to.'},
 
 {t:'brand',tag:'case',diff:'medium',trap:true,
- q:'Surf excel’s mix is laid out in full in the deck. <b>“Daag Achhe Hain — if you get dirty in the act of doing good, then dirt is good”</b> belongs to which P?',
- opts:['Proposition — what the brand wants to stand for in the consumer’s mind',
-       'Promotion — the line runs on TV, print, outdoor and digital, so it is a promotion asset',
-       'Product — it describes what the detergent does to dirt',
-       'Packaging — the line is printed on the pack'],
- why:'The deck’s Surf excel summary, row by row:<div class="work">Product      spray-dried or mixed detergent,\n             in powder or liquid form\nPlace        any store that sells the category\nPrice        premium, around 120–200 RPI\nPackaging    sustainable sachets, pouches, plastic bottles\nPromotion    TV, print, outdoor and digital\nProposition  Daag Achhe Hain</div>The trap is Promotion. Promotion is the <b>carrier</b> — the media the message travels through. Proposition is the <b>idea being carried</b>: the thing the brand wants to own in the consumer’s head. “Daag Achhe Hain” would still be Surf excel’s proposition if it never bought a single TV spot. Useful test: if you changed the media plan entirely, would this line change? No — so it is not Promotion.'},
+ q:'Lather’s marketing head opens the annual plan: <i>“Our proposition for next year is a ₹99 entry price, 40% off on quick commerce for launch month, and 200 fitness influencers on Instagram.”</i> What has she actually put on the table?',
+ opts:['Price and Promotion decisions. She has not stated a <b>proposition</b> at all — no idea of what Lather wants to stand for in the consumer’s mind, which leaves the other Ps nothing to line up behind',
+       'A complete proposition — the proposition is the total offer the consumer receives, which is price plus deal plus communication',
+       'A positioning statement, which is the same thing as a proposition under a different name in the 6P framework',
+       'A Product decision, since price and influencer choice are how a consumer experiences a product today'],
+ why:'<b>Proposition: what a brand wants to stand for in the minds of the consumer.</b> Everything she listed is a tactic that could be swapped out next quarter without changing what the brand means.<br><br>The test to apply: <i>would this survive a complete change of media plan and price point?</i> Surf excel’s <b>“Daag Achhe Hain — if you get dirty in the act of doing good, then dirt is good”</b> would. It is the proposition; TV, print, outdoor and digital are the Promotion that carries it, and the 120–200 RPI is the Price that has to be consistent with it. A discount is not an idea.<br><br>On the third option: Positioning and Proposition are close relatives but sit in different boxes of the Marketing Management Process. <b>Positioning</b> is the STP decision — the unique value you choose to offer a defined target. <b>Proposition</b> is the mix element that carries it into execution. Positioning is not one of the six Ps.'},
+
+{t:'brand',tag:'case',diff:'easy',
+ q:'Lather’s plan is presented P by P: sulphate-free formula · ₹340 for 340 ml · 4,000 kiranas plus Blinkit and Zepto · Instagram and YouTube · amber pump bottle with a refill pouch. Which of the six Ps is missing — and why does its absence matter most?',
+ opts:['<b>Proposition.</b> Without a stated idea of what Lather stands for, the other five Ps have nothing to align to — and the deck’s rule is that the elements of the mix are inter-related',
+       '<b>Positioning</b> — it is the sixth P and belongs next to Price',
+       '<b>People</b> — the sixth P in the course’s framework',
+       'Nothing is missing. The four classic Ps are covered and Packaging is a bonus'],
+ why:'Walk the list: Product (sulphate-free formula) · Price (₹340/340 ml) · Place (kiranas + quick commerce) · Promotion (Instagram, YouTube) · Packaging (amber pump bottle, refill pouch). Five of six. <b>Proposition</b> is absent.<div class="work">The course’s six:\n  Product · Price · Place · Promotion · Packaging · Proposition\n\nNot Ps:\n  Positioning → sits upstream, in STP\n  People / Process / Physical evidence\n                → the 7P services extension</div>And the absence is not cosmetic. A plan with five Ps and no organising idea produces exactly the failure Quiz I tested — execution that contradicts itself, because nothing tells you whether ₹340 is the right price or a pump bottle is the right pack.'},
+
+{t:'brand',tag:'case',diff:'medium',
+ q:'Lather decides to go upmarket: <b>RPI from 85 to 140</b>. It keeps the same 200 ml PET bottle with the flip cap it has used since launch, the same 4,000 kiranas, and the same line — <i>“Great hair, honest price.”</i> What is wrong here?',
+ opts:['Price has moved and nothing else has. A premium price sitting on a value pack, a value proposition and a value channel reads as an unjustified price rise — the elements of the mix are inter-related, so they have to move together',
+       'Nothing is wrong. Price is an independent lever and can be pulled on its own so long as margin improves',
+       'The only error is Place — a kirana store cannot stock a premium product',
+       'The error is the number. An RPI of 140 is impossible, since RPI cannot exceed 100'],
+ why:'The deck’s closing slide on the mix is the whole answer: <b>the elements of the mix are inter-related.</b> Moving to RPI 140 means asking the consumer to pay <b>1.4× the category’s average price per unit</b>, and she will look for the reason in the other five Ps. Here every one of them still says “value”: the same flip-cap PET bottle, the same shelf, and a proposition that literally promises an <i>honest price</i>.<br><br>Compare Surf excel, whose 120–200 RPI is carried by a distinctive proposition and a full media plan behind it. The Place answer is too strong — kiranas sell premium products every day; the problem is the <i>combination</i>, not the channel alone. And an RPI above 100 is not just possible, it is the definition of a premium brand: 100 is the category average, not a ceiling.'},
+
+{t:'brand',tag:'case',diff:'medium',
+ q:'Three shampoos in the same price band: near-identical formulations, all around ₹0.90/ml, all in the same stores, all advertised at similar weight. One of them holds <b>twice the share</b> of the other two. Blind-tested, consumers cannot reliably tell them apart. What is doing the work?',
+ opts:['The brand — the set of mental associations the consumer holds, which add to the <b>perceived</b> value. When products converge, the differentiation moves out of the product and into what the name means',
+       'Nothing. A 2× share gap between indistinguishable products has to be a measurement error',
+       'Place — the leader must simply have deeper distribution, since that is the only variable left',
+       'Its blind-test result, which proves its performance quality is superior'],
+ why:'This is the deck’s question <i>“what is a brand’s biggest challenge?”</i>, run in reverse. When formula, price, shelf and media weight are all held equal and share is not, the difference is sitting where Keller says the brand lives — in <b>mental associations that add to perceived value</b>. Perceived is the operative word: the blind test says the products are the same, and the market says the experience of buying them is not.<br><br>The Place option is ruled out by the setup (same stores), and the blind-test option contradicts it — consumers <i>could not tell them apart</i>, so there was no features win to have.'},
 
 /* ============ 02 · PROPOSITION, PRODUCT, PRICE ============ */
-{t:'mix',tag:'concept',diff:'easy',
- q:'How does Session 8 define <b>Proposition</b>?',
- opts:['What a brand wants to stand for in the minds of the consumer',
-       'The discount or offer a brand puts in front of a shopper to close the sale',
-       'The specification sheet of the product — its ingredients, size and claims',
-       'The revenue the brand proposes to earn over the financial year'],
- why:'One line, worth memorising: <b>“Proposition: what a brand wants to stand for in the minds of the consumer.”</b> Two things follow. First, it is about a <i>mind</i>, not a shelf — like Keller’s definition of a brand, it is a mental association. Second, Session 10 opens by pairing it with Product: <b>the proposition is the promise of value, the product is the proof of that promise.</b> That pairing is the reason the six Ps have to hang together — a proposition with no product to back it is a claim the consumer will eventually test and reject.'},
+{t:'mix',tag:'case',diff:'medium',
+ q:'<b>CrunchLab</b> sells a 40 g bar: 20 g protein, no added sugar, dates, almonds and cocoa. Buyers who never read the pack still assume <i>“this will help me build muscle.”</i> R&D has a 25 g-protein version and three new flavours ready for next year. Which of these is the <b>Expected</b> product?',
+ opts:['“It will help me build muscle” — the benefit the buyer assumes she is getting, whether or not the pack ever claims it',
+       'The 20 g of protein, no added sugar, dates, almonds and cocoa — the specification actually shipped',
+       'A protein bar — the basic need the product serves',
+       'The 25 g version and the three new flavours waiting in R&D'],
+ why:'The four levels, mapped onto this case:<div class="work">Core       a protein bar\nGeneric    20g protein, no added sugar, dates,\n           almonds, cocoa — what is actually shipped\nExpected   “it will help me build muscle” —\n           what she assumes she is buying\nPotential  25g protein, three new flavours —\n           what it could become</div>The <b>Expected</b> level is the one managers skip, and it is the dangerous one, because it is an assumption the consumer makes on your behalf and then holds you to. CrunchLab never printed a muscle-gain claim; it will still be judged against one. That is the level where unadvertised promises get broken.'},
 
-{t:'mix',tag:'apply',diff:'medium',
- q:'The deck works the four levels of Product through a protein bar. <b>“More flavours and a higher protein density”</b> — things not on sale yet — is which level?',
- opts:['Potential product','Expected product','Generic product','Core product'],
- why:'The four levels run from the abstract to the not-yet-built:<div class="work">Core       the protein bar itself — the basic need served\nGeneric    a bar with no added sugar, made with cocoa,\n           dates, cashews, almonds — what is actually sold\nExpected   a bar that will help you gain muscle mass —\n           what the buyer assumes she is getting\nPotential  more flavours, higher protein density —\n           what it could become</div>So the order is <b>Core → Generic → Expected → Potential</b>. Anything described as future headroom — a variant, a format, a benefit not yet delivered — is the <b>Potential</b> product. Note the difference between Generic and Expected: Generic is the physical specification you ship; Expected is the benefit the consumer takes for granted, whether or not you spelled it out.'},
+{t:'mix',tag:'case',diff:'medium',
+ q:'CrunchLab’s proposition is <i>“the clean protein bar — nothing you cannot pronounce.”</i> Its bestselling flavour uses a synthetic sweetener listed on the pack as E955. A consultant advises: <i>“the proposition lives in the consumer’s mind, so it only matters what we say — leave the formula alone and stop mentioning the ingredient.”</i> What does the course say?',
+ opts:['The <b>product is the proof</b> of the promise the proposition makes. A proposition the product contradicts gets found out, and what it costs you is <b>trust</b> — one of the four things that made the name a brand',
+       'The consultant is right. The proposition is a mental association, so only what is communicated matters',
+       'The fix is to move the claim into the Promotion P, where softer language is permitted',
+       'The fix is to raise the price — a premium RPI signals cleanliness and offsets the ingredient'],
+ why:'Session 10 opens on exactly this: <b>“Proposition is the promise of value that a brand provides. Product is the proof of that promise.”</b> The two are not independent, and the direction of dependence matters — a proposition can be written in an afternoon; the product is what has to survive contact with a consumer who turns the pack over.<br><br>The consultant’s error is to treat “lives in the mind” as “is unfalsifiable”. The associations in the consumer’s mind are built by <i>use</i>, and one of the four is trust. Note also that this is not fixable in another P: shifting the claim to Promotion changes who says it, not whether it is true, and a higher price makes the contradiction more expensive, not less.'},
 
 {t:'mix',tag:'calc',diff:'medium',
- q:'Three brands compete in a category, all selling the same pack size. Using <b>RPI = Σ (market share × brand price)</b> as the category benchmark, roughly what is <b>Brand A’s RPI</b>?',
- given:['A · price ₹100 · sales 100','B · price ₹200 · sales 200','C · price ₹200 · sales 700'],
- opts:['About 53 — A sells at roughly half the category’s average price',
-       'About 60 — A sells at roughly three-fifths of the category’s average price',
-       'About 100 — A is priced at the category average',
-       'About 190 — A is a premium brand'],
- why:'Market shares come from sales, not from the number of brands. Total sales = 1,000.<div class="work">Shares:  A 100/1000 = 10%\n         B 200/1000 = 20%\n         C 700/1000 = 70%\n\nCategory average price\n  = 0.10×100 + 0.20×200 + 0.70×200\n  = 10 + 40 + 140  = ₹190\n\nRPI(A) = 100 / 190 = 0.53  →  53</div>Read it as: <b>A sells at 53% of what the average rupee in this category pays.</b> RPI 100 means priced exactly at the category average — which is why Surf excel’s “120–200 RPI” marks it as premium, at 1.2–2× the average.<br><br>The <b>60</b> answer is the trap: it comes from averaging the three prices unweighted, (100+200+200)/3 = ₹167. That is wrong because C alone is 70% of the market — the average price a consumer actually pays has to be dominated by C, not given the same weight as A.'},
+ q:'Lather’s founder wants to claim <i>“we are roughly a third cheaper than the category.”</i> Category is all 1-litre packs. Using <b>RPI</b>, what is the right read on Lather?',
+ given:['Lather · ₹340 · 600 units','Silk · ₹600 · 300 units','Purely · ₹1,200 · 100 units'],
+ opts:['RPI ≈ <b>67</b> — Lather sells at about two-thirds of the category’s share-weighted average price. The claim stands',
+       'RPI ≈ <b>48</b> — average the three prices and Lather is under half the category',
+       'RPI ≈ <b>28</b> — against Purely, the most expensive brand in the category, Lather is a quarter of the price',
+       'RPI ≈ <b>100</b> — Lather is the biggest brand, so by definition it sets the category average'],
+ why:'<div class="work">Shares from units (total 1,000):\n  Lather 60%   Silk 30%   Purely 10%\n\nCategory weighted-average price\n  = 0.6(340) + 0.3(600) + 0.1(1200)\n  = 204 + 180 + 120  =  ₹504\n\nRPI(Lather) = 340 / 504 = 0.67  →  67</div>The two wrong methods are the two you have to be able to refuse. <b>48</b> comes from averaging the three prices unweighted (₹713) — that treats Purely’s 100 units as equal in weight to Lather’s 600, when what you want is the price the typical rupee in the category actually pays. <b>28</b> benchmarks against the priciest brand; RPI is always measured against the <i>average</i>, never an extreme.<br><br>The last option is nearly interesting and still wrong: Lather being 60% of volume does drag the average down, so its own weight flatters the “third cheaper” claim — but the average is ₹504, not ₹340, because the other 40% is priced well above it.'},
 
 {t:'mix',tag:'calc',diff:'medium',trap:true,
- q:'You are comparing your shampoo’s pricing to the competitor’s. What must you do <b>before</b> any RPI number means anything?',
- given:['Yours · 180 ml ₹10 · 400 ml ₹20 · 1000 ml ₹50','Competitor · 200 ml ₹20 · 500 ml ₹40 · 1000 ml ₹100'],
- opts:['Convert every pack to a price per ml — on that basis you sit at roughly half the competitor’s price, so you are the value brand',
-       'Nothing — compare the pack prices directly; ₹10 against ₹20 already tells you that you are cheaper',
-       'Compare only the 1000 ml packs, since that is the one size both brands share',
-       'Convert to price per pack sold, since shoppers buy packs and not millilitres'],
- why:'Price is only comparable once grammage is stripped out:<div class="work">Yours        10/180  = ₹0.056 /ml\n             20/400  = ₹0.050 /ml\n             50/1000 = ₹0.050 /ml\n\nCompetitor   20/200  = ₹0.100 /ml\n             40/500  = ₹0.080 /ml\n            100/1000 = ₹0.100 /ml</div>About <b>₹0.05 against ₹0.09</b> — you are roughly half, an RPI in the 50s. The deck makes the identical point with its second RPI table, where brand B at ₹200 for 500 ml (₹0.40/ml) is <i>four times</i> brand A at ₹100 for 1000 ml (₹0.10/ml), even though the headline prices are only 2× apart.<br><br>Comparing only the 1000 ml packs happens to give the same “half” here, but it is still the wrong method: it throws away most of the range, and it collapses the moment either brand changes its size line-up — which is precisely what a pack-price architecture is designed to do.'},
+ q:'Silk launches a <b>180 ml at ₹149</b>. Lather sells <b>200 ml at ₹199</b>. A junior analyst circulates a note: <i>“Silk has gone 25% cheaper than us — we should cut price.”</i> What is the right read?',
+ given:['Silk · 180 ml · ₹149','Lather · 200 ml · ₹199'],
+ opts:['On price per ml, Silk is ₹0.83 against Lather’s ₹1.00 — about <b>17% cheaper</b>, not 25%. The pack comparison overstates the gap because the two packs are different sizes',
+       'The analyst is right — the shopper sees ₹149 next to ₹199 on the shelf, so pack price is the comparison that counts',
+       'Silk is in fact <i>more</i> expensive per ml, so Lather should hold price or raise it',
+       'The comparison cannot be made at all — RPI is only defined between identical pack sizes'],
+ why:'<div class="work">Silk    149 / 180 = ₹0.828 per ml\nLather  199 / 200 = ₹0.995 per ml\n\nGap = 1 − (0.828 / 0.995) = 16.8%  →  ~17%</div>Grammage always comes out first. The deck makes the same point on its second RPI table, where ₹200 for 500 ml is <b>four times</b> ₹100 for 1,000 ml even though the headline prices are only 2× apart.<br><br>The shelf-price answer confuses two different questions. What the shopper <i>notices</i> is a real input into a pack-price decision — it is why ₹149 and ₹199 price points exist at all. But it is not a price comparison, and a 17% gap and a 25% gap imply very different responses. And the last option is the trap worth naming: restricting yourself to matching pack sizes is not a stricter method, it is a method that stops working the moment either brand changes its range — which is precisely what a pack-price architecture is designed to do.'},
 
-{t:'mix',tag:'apply',diff:'easy',
- q:'The deck records Surf excel’s price as <b>“premium at around 120–200 RPI”</b>. What does an RPI of 150 tell you?',
- opts:['The brand sells at about 1.5× the category’s share-weighted average price per unit',
-       'The brand earns a 150% profit margin on every pack it sells',
-       'The brand is 150% more expensive than the cheapest brand in the category',
-       'The brand holds 150 index points of market share against a base year of 100'],
- why:'RPI is a <b>relative price index</b>: the brand’s price per unit divided by the category’s share-weighted average price per unit, ×100.<div class="work">RPI  100  priced at the category average\nRPI &lt;100  value / discount end\nRPI &gt;100  premium — 150 means 1.5× the average</div>Two things it is not. It says nothing about <b>margin</b> — a brand can carry a 150 RPI on a thin margin if its costs are high. And the benchmark is the <b>average</b>, not the cheapest brand in the category. The reason the average is share-weighted rather than a simple mean is the same reason as in the previous question: what you want is the price the typical rupee in the category actually pays.'},
+{t:'mix',tag:'case',diff:'easy',
+ q:'Three Lather packaging briefs. <b>(a)</b> a 10 ml sachet strip hung at the kirana counter, bought without planning · <b>(b)</b> a pump added to the 340 ml after complaints about spilling in the shower · <b>(c)</b> a matte-black redesign, briefed to “stand out on a quick-commerce grid full of white bottles.” Which mapping to the deck’s three jobs is right?',
+ opts:['(a) impulse driver · (b) smoothing the rough edges · (c) clutter breaking',
+       '(a) clutter breaking · (b) impulse driver · (c) smoothing the rough edges',
+       '(a) smoothing the rough edges · (b) clutter breaking · (c) impulse driver',
+       'None of them — all three are Product decisions, since they change how the product is used'],
+ why:'The deck’s line is that <b>packaging brings the purpose alive</b>, through three jobs:<div class="work">Impulse driver   the pack triggers an unplanned buy\nClutter breaking the pack gets seen among\n                 near-identical competitors\nSmoothen the     the pack fixes friction in using\nrough edges      the product</div>A counter strip bought without planning is textbook <b>impulse</b>. A pump that stops spilling is <b>smoothing the rough edges</b> — note it changes nothing about the shampoo itself. And a matte-black bottle briefed against a grid of white ones is <b>clutter breaking</b>, the digital-shelf version of the supermarket problem.<br><br>The last option is worth refusing deliberately: all three are marketing jobs done by the pack, which is exactly why Packaging is a full P in this course rather than a footnote under Product.'},
 
-{t:'mix',tag:'concept',diff:'easy',
- q:'Session 9 says packaging <b>“brings the purpose alive”</b>. Which three jobs does the deck give it?',
- opts:['Impulse driver, clutter breaking, and smoothing the rough edges of the experience',
-       'Cost reduction, shelf-life extension and transport efficiency',
-       'Legal compliance, ingredient disclosure and barcode scanning',
-       'Trademark protection, anti-counterfeiting and serialisation'],
- why:'<b>Impulse driver</b> — the pack itself triggers an unplanned purchase. <b>Clutter breaking</b> — it gets seen in a shelf full of near-identical competitors. <b>Smoothen the rough edges</b> — it fixes the friction in using the product (the spout that does not drip, the resealable pack, the pump). All three are <i>marketing</i> jobs, which is exactly why Packaging is promoted to a full P here rather than being filed under Product.<br><br>The deck separates pack decisions into two vectors — <b>design considerations</b> (how it looks) and <b>functional considerations</b> (how it works). The distractors here are all real concerns of a packaging team; they are just supply-chain, legal and security concerns, not the marketing purpose the deck is naming.'},
+{t:'mix',tag:'case',diff:'medium',
+ q:'Lather’s board sets a three-year goal: <b>“get to an RPI of 130.”</b> The marketing head has to explain to them what they have just committed the company to. Which explanation is right?',
+ opts:['Selling at about 1.3× the category’s share-weighted average price per unit — which is a claim about what the consumer believes the brand is worth, so it commits Product, Packaging and Proposition to justify it, not just the price sticker',
+       'A 130% gross margin on every pack sold',
+       'Being 130% more expensive than the cheapest brand on the shelf',
+       'Growing to 130 index points of market share against this year’s base of 100'],
+ why:'<b>RPI = brand price per unit ÷ category weighted-average price per unit × 100.</b> So 130 means 1.3× the average — the same neighbourhood as Surf excel’s 120–200.<div class="work">RPI 100   at the category average\nRPI &lt;100  value end\nRPI &gt;130  premium — 1.3× the average</div>The important half of the answer is the second clause. RPI is a <i>price</i> measure, but a price the consumer will actually pay is an outcome of the whole mix — which is why this is a three-year goal and not a pricing memo. The board has committed to building a product, pack and proposition that make 1.3× believable.<br><br>Note what RPI is not: it says nothing about <b>margin</b> (a 130 RPI on a costly product can be thin), and its benchmark is the category <b>average</b>, never the cheapest brand.'},
 
 /* ============ 03 · PRODUCT MIX ============ */
-{t:'pmix',tag:'concept',diff:'easy',
- q:'Session 10 opens by fixing the relationship between two of the Ps. Which is it?',
- opts:['Proposition is the promise of value a brand makes; Product is the proof of that promise',
-       'Product is the promise of value; Proposition is the proof, delivered through advertising',
-       'Proposition and Product are two names for the same thing at different stages of the funnel',
-       'Product is the promise made to the retailer; Proposition is the promise made to the consumer'],
- why:'<b>“Proposition is the promise of value that a brand provides. Product is the proof of that promise.”</b> The direction matters. A proposition can be written in an afternoon; the product is what has to survive contact with a consumer who tries it. This is the mechanism behind “the elements of the mix are inter-related” — if the proposition promises what the product cannot deliver, the mix does not just look inconsistent, it actively destroys the trust that made the name a brand in the first place.'},
+{t:'pmix',tag:'case',diff:'medium',trap:true,
+ q:'CrunchLab blind-tests its bar against the category leader on taste, texture and after-taste with 400 people, and wins all three <b>60:40</b>. Six months after launch its share is <b>3%</b>. The founder concludes the blind test must have been wrong. Is he right?',
+ opts:['No. The blind test established a win on <b>features</b>, with brand, pack and price stripped out — it never claimed anything about what happens when the consumer can see whose bar it is, and it cannot measure performance quality or the other five Ps',
+       'Yes. A features win should convert into share automatically, so the test was badly run',
+       'No — the test measured performance quality, so what changed is the defect rate after launch',
+       'No — the three attributes must have been points of difference, so CrunchLab should retest on points of parity'],
+ why:'The word doing the work is <b>blind</b>. Removing the brand, the pack and the price is what makes the test a clean read on the product — and is exactly what limits it. Everything stripped out is added straight back in the real market, where the shopper meets a name she has never heard of, on a shelf, next to a leader she trusts.<div class="work">A blind test CAN establish   a win on features\nIt CANNOT establish         performance quality\n                            (stability + defect rate,\n                             which need time)\nIt CANNOT establish         that anyone will buy you</div>The deck’s closing line covers it: <b>there is no such thing as a definitively better product.</b> A 60:40 features win with 3% share is not a contradiction — it is the normal state of a new brand that has won the product argument and not yet won any of the others.'},
 
-{t:'pmix',tag:'concept',diff:'easy',
- q:'The deck says several things together determine a product’s <b>quality</b>. Which set does it use?',
- opts:['Features — which attributes it delivers; Performance — whether it delivers them consistently; Design — its look, feel and usability',
-       'Price, packaging and promotion',
-       'Durability, warranty and after-sales service',
-       'Ingredients, manufacturing process and certification'],
- why:'Three parameters, each answering a different question:<div class="work">Features     Which attributes does the product deliver on?\nPerformance  Does it deliver on them consistently?\nDesign       How is the look / feel / usability?</div>And the point of naming them is competitive: <b>you want a “win” on these versus competition</b> — not a win in the abstract. Note that the deck is talking about the product itself here, so price, packaging and promotion are deliberately outside the frame; they are other Ps. Durability and warranty sit inside Performance rather than beside it.'},
+{t:'pmix',tag:'case',diff:'medium',
+ q:'Three complaint patterns land on CrunchLab’s desk. <b>(a)</b> the bar tastes different in summer batches · <b>(b)</b> 1 in 30 bars arrives crumbled inside an intact wrapper · <b>(c)</b> it is too hard to bite straight out of the fridge. Which product-quality parameters are being hit?',
+ opts:['(a) and (b) are both <b>performance quality</b> — the deck’s two measures, stability over time and defect rate. (c) is <b>design</b> — look, feel, usability',
+       'All three are features problems — each is an attribute the product fails to deliver',
+       '(a) is design · (b) is features · (c) is performance',
+       'None touch product quality — all three are Packaging problems, and Packaging is a separate P'],
+ why:'<div class="work">Features     which attributes does it deliver on?\nPerformance  does it deliver them consistently?\n             measured 2 ways:\n               stability  — does not change over time\n               defect-free — low defect rate\nDesign       look / feel / usability</div>(a) is the batch-to-batch variation the deck calls <b>stability</b>. (b) is a straight <b>defect rate</b>. Both sit under Performance, which is why the deck insists performance is measured in exactly those two ways.<br><br>(c) is the one people misfile. Nothing is defective and nothing has changed — the bar simply does not work well in the hand at fridge temperature. That is <b>usability</b>, and usability is Design. Note the wrapper is intact in (b), which is what keeps it a product-quality finding rather than a packaging one.'},
 
-{t:'pmix',tag:'concept',diff:'medium',
- q:'The deck says <b>performance quality</b> is measured in exactly two ways. Which two?',
- opts:['Stability — it does not change over time; and defect-free — a low defect rate',
-       'Speed of delivery and cost per unit',
-       'Consumer ratings and repeat purchase rate',
-       'Blind-test win rate and market share'],
- why:'<b>Stability</b> — the product does not change over time, so the bar you buy in December performs like the one you bought in June. <b>Defect-free</b> — a low defect rate across units. Both are about <i>consistency</i>, which is what separates Performance from Features. Features answer “does it do the thing at all?”; Performance answers “does it do the thing every time?”<br><br>Ratings, repeat purchase and share are all downstream <i>consequences</i> of good performance quality, not measures of it — they are contaminated by price, distribution and advertising. A blind-test win, as the next question shows, measures features, not performance.'},
+{t:'pmix',tag:'case',diff:'medium',
+ q:'Lather sells <b>one</b> shampoo — anti-hairfall — in four sizes: 10 ml sachet, 180 ml, 340 ml, 650 ml. The team proposes adding an anti-dandruff and a colour-protect variant. In the deck’s vocabulary, what are they proposing, and what do they already have?',
+ opts:['They are proposing two new <b>products</b>, covering two new <b>demand spaces</b>. What they already have is one product built out into four <b>SKUs</b>',
+       'They are proposing four new SKUs. What they already have is four products',
+       'They are proposing two new categories. What they already have is one category holding four products',
+       'They are proposing two new points of difference. What they already have is four points of parity'],
+ why:'<div class="work">Company → Category → Product → SKU\n                     (demand    (pack size /\n                      space)     format)</div>Four sizes of one formulation are four <b>SKUs</b> — depth. Anti-dandruff and colour-protect are two different <b>needs</b>, so they are two new <b>products</b> covering two new <b>demand spaces</b> — width. The deck’s own shampoo example lists the spaces: anti-dandruff, hairfall protection, hair strength, smooth hair, damage protection.<br><br>The distinction decides the business case. Width is justified by needs you are not currently serving; depth is justified by pack-price and shopper-mission arguments. Confuse them and you end up launching a pack size to solve a needs problem, or a variant to solve a cash-outlay problem.'},
 
-{t:'pmix',tag:'apply',diff:'medium',trap:true,
- q:'A detergent brand runs a blind test against the market leader on <i>cleans stains</i>, <i>odour protection</i> and <i>fragrance</i>, and wins on all three. What has it established — and what has it <b>not</b>?',
- opts:['A win on <b>features</b>, stripped of brand and pack perception — but not that consumers will prefer it once they can see whose product it is',
-       'That its product is definitively better, so the brand should now start winning share automatically',
-       'A win on performance quality, since a blind test is what measures stability and defect rate',
-       'Its points of parity, since a blind test can only confirm the attributes every brand already delivers'],
- why:'The deck’s slide is exactly this: <b>a “win” on features can be secured in a blind test</b>, run across the three listed attributes. The word doing the work is <i>blind</i> — the test removes the brand, the pack and the price, which is what makes it a clean read on the product and, at the same time, what limits it. Everything the brand adds back in the real world is missing from the result.<br><br>Two further distinctions. Features are not automatically PODs — the deck maps them onto the positioning vocabulary, and some of the three will be <b>points of parity</b> that every detergent must clear while others are the <b>points of difference</b> you actually win on. And a single test at one moment cannot measure <b>performance</b> quality, which is stability over time plus defect rate. Hence the session’s closing line: <b>there is no such thing as a definitively better product.</b>'},
+{t:'pmix',tag:'case',diff:'medium',
+ q:'Lather launches all five shampoo variants at once. Twelve months on: total category share is <b>flat</b>, shelf facings per variant in kiranas have fallen, two variants sell under 4% of volume each, and shoppers describe the range as “confusing.” Which of the deck’s costs of width have materialised?',
+ opts:['All three the deck names — <b>cost</b> (five supply chains carrying the same volume), <b>splitting consumer attention</b> (the confusion and the lost facings), and a <b>higher chance of failure</b> (the two dead variants)',
+       'None. Flat share with more variants proves healthy cannibalisation, which is the intended outcome of width',
+       'Only cost. Consumer attention and failure rate are Promotion problems, not product-mix problems',
+       'This is a price-ladder failure — five variants breach the ladder by definition'],
+ why:'The deck puts one benefit against three costs:<div class="work">+  catering to different demand spaces\n\n−  cost\n−  splitting consumer attention\n−  higher chance of failure</div>Every one of the three has shown up here in a measurable form. The instructive part is that the benefit has <i>not</i>: flat category share means the five variants are not reaching needs the one variant was missing — they are dividing the same demand between more products, and paying five times to do it.<br><br>Note what the case does not tell you: whether the variants were wrong or the execution was. Width is a real strategy — it is just one whose costs land immediately and whose benefit only lands if the demand spaces were genuinely unserved. The price ladder is a pack-size rule and has nothing to do with variant count.'},
 
-{t:'pmix',tag:'apply',diff:'medium',
- q:'A shampoo company runs separate variants for anti-dandruff, hairfall protection, hair strength, smooth hair and damage protection. In the deck’s vocabulary, these five are…',
- opts:['Demand spaces — different needs consumers bring to the same category',
-       'SKUs — the same product offered at five different pack sizes',
-       'Points of parity — the five things every shampoo in the category must deliver',
-       'Channels — the five routes through which the shampoo reaches the shopper'],
- why:'<b>Demand spaces are the different needs of consumers</b> within a category, and the shampoo list is the deck’s own example. They are the reason a company runs <i>width</i> — more than one product in one category — despite the costs of doing so.<br><br>Keep the hierarchy straight, because the SKU answer is testing exactly that confusion:<div class="work">Company  →  Category  →  Product  →  SKU\n                        (demand      (pack size /\n                         space)       format)</div>Five variants for five different needs are five <b>products</b>. Five pack sizes of one variant are five <b>SKUs</b>. And they are not points of parity — a POP is an attribute every brand must clear to be considered at all, whereas these are deliberately <i>different</i> needs served by different products.'},
+{t:'pmix',tag:'case',diff:'easy',
+ q:'Lather, a shampoo company, is weighing two moves: a face wash, and a range of home-cleaning liquids. A board member asks what business a shampoo company has in either. What reason does the course give for operating across categories?',
+ opts:['<b>Synergies</b> — in distribution, manufacturing and capabilities: the same kiranas and quick-commerce warehouses, the same liquid-filling lines, the same formulation and pack know-how',
+       'Because more categories mean more demand spaces, and more demand spaces always mean more profit',
+       'Because a company must operate in at least three categories before it can be called a brand',
+       'Because breadth lowers RPI, and a lower RPI grows share'],
+ why:'The deck’s answer to <i>“why do companies operate in more than one category?”</i> is three words: <b>distribution, manufacturing, capabilities</b>. That is also the test to apply to the two moves in front of the board — both share the distribution and the filling lines, so both clear the synergy bar on those two; the formulation and consumer capability is a much better fit for face wash than for floor cleaner.<br><br>Note the difference in logic one level down. Multiple <b>categories</b> are justified by synergies on the supply side. Multiple <b>products within</b> a category are justified by demand spaces on the consumer side. Different question, different answer.'},
 
-{t:'pmix',tag:'concept',diff:'medium',trap:true,
- q:'Session 10 closes with <b>“there is no such thing as a definitively better product.”</b> What is the deck’s point?',
- opts:['A product is better only relative to the attributes a chosen target values — so a product “win” means winning the attributes that matter to your segment, not every attribute',
-       'All products in a category are effectively identical, so the mix should be fought out on price and promotion alone',
-       'Product quality cannot really be measured, so companies should stop running blind tests',
-       'The better product is always the more expensive one, because price is what signals quality'],
- why:'The session runs three <i>“which of these is a better product?”</i> comparisons and refuses to answer any of them — because the question is incomplete until you say <b>better for whom, on which attribute</b>. That is the bridge back to STP: the target segment decides which attributes count, and only then can a product win be defined.<br><br>Note what the deck is <i>not</i> saying. It is not saying products do not differ — the very next takeaway is “to secure a product win, you want to win on one or more of the <b>relevant</b> attributes”, and quality is still measured concretely as stability plus a low defect rate. Relative, not unmeasurable.'},
+{t:'pmix',tag:'case',diff:'medium',trap:true,
+ q:'Two shampoos. <b>Lather</b>: best cleaning in lab tests, mild fragrance, ₹1.00/ml. <b>Silk</b>: cleans adequately, strong fragrance that lasts till evening, ₹0.60/ml. A consultant’s deck concludes: “Lather is the better product, full stop.” What is the course’s response?',
+ opts:['There is no definitively better product. Better is relative to the attributes the chosen target values — for a segment that buys shampoo for a fragrance that lasts the day, Silk wins on the attribute that decides the purchase',
+       'The consultant is right — lab cleaning performance is the objective measure of a shampoo',
+       'Neither is better, because a shampoo and a fragrance product are different categories',
+       'Silk is better, because in an Indian mass category the lower price per ml always wins'],
+ why:'Session 10 runs three <i>“which of these is a better product?”</i> comparisons and refuses to answer any of them, closing with <b>“there is no such thing as a definitively better product.”</b> The question is incomplete until you say <b>better for whom, on which attribute</b> — which is the bridge straight back to STP: the target segment decides which attributes count.<br><br>Note the two ways to get this wrong. The consultant picks one attribute (cleaning) and calls it objective. The last option picks a different attribute (price) and calls <i>that</i> universal — same mistake, opposite direction. The deck’s actual takeaway keeps the discipline in place: <b>to secure a product win, you want to win on one or more of the <i>relevant</i> attributes.</b> Relative, not arbitrary.'},
 
 /* ============ 04 · PACK-PRICE ARCHITECTURE ============ */
-{t:'pack',tag:'concept',diff:'easy',
- q:'Sessions 11–12 open on a three-level hierarchy that pack architecture builds out. Which is it, widest to narrowest?',
- opts:['Category → Product → SKU','SKU → Category → Product','Product → Category → SKU','Brand → Category → Demand space'],
- why:'<b>Category → Product → SKU.</b> The category holds several products, each serving a different demand space; each product is then built out into SKUs — the individual pack sizes and formats. In the deck’s diagram, Product 1 carries one SKU, Product 2 carries three and Product 3 carries two, which is the whole point: <b>pack architecture is what turns a product into something a shopper can actually buy</b>, in the size and format that suits the occasion.<br><br>This sits one level below the hierarchy in Session 10 (Company → Category → Product). Together: Company → Category → Product → SKU.'},
+{t:'pack',tag:'calc',diff:'medium',
+ q:'Lather’s proposed price list is on the table. Which rung breaks the <b>price ladder</b>, and why does it matter?',
+ given:['100 ml · ₹120','250 ml · ₹250','500 ml · ₹560','1 L · ₹1,000'],
+ opts:['The <b>500 ml</b>, at ₹1.12/ml — dearer per ml than the 250 ml below it. A shopper trading up is asked to pay more per ml for buying more, so the uptrade stalls at 250 ml',
+       'The <b>100 ml</b>, because the smallest pack should be the cheapest per ml',
+       'The <b>1 L</b>, because a four-figure price crosses a threshold shoppers resist',
+       'None of them. The ladder governs absolute prices, and those rise correctly with size'],
+ why:'<div class="work">100 ml   120 / 100  = ₹1.20 /ml\n250 ml   250 / 250  = ₹1.00 /ml\n500 ml   560 / 500  = ₹1.12 /ml   ← breaks\n1 L     1000 / 1000 = ₹1.00 /ml</div>The deck’s rule: <b>price per unit must not rise as the pack grows</b> — a ≥ b ≥ c ≥ d. The 500 ml goes back up, so the ladder has a broken rung in the middle of it, and the consequence is behavioural: a shopper standing in front of the 250 ml has no reason to reach for the 500 ml, because she would be paying a premium for the privilege of buying more.<br><br>The second option inverts the rule. The <b>smallest pack is the dearest per ml</b> — that is the ladder working correctly, and it is what protects the larger packs from being cannibalised. And the last option gets the variable wrong: absolute price of course rises with size; the ladder is about price <i>per unit</i>.'},
 
-{t:'pack',tag:'concept',diff:'easy',
- q:'The deck says quantity increases follow a <b>price ladder</b>. What is the rule?',
- opts:['Price per unit must not rise as the pack gets bigger — each larger pack is priced at the same or a lower price per ml or gram',
-       'Price per unit must rise with pack size, since larger packs cost more to make and to ship',
-       'The absolute price of each pack must be exactly double the pack below it',
-       'Every pack of a brand must carry the same absolute price, so shoppers are not confused'],
- why:'The deck’s ladder is four rungs, each constrained by the one above:<div class="work">Price per unit  a\nPrice per unit  b  ≤ a\nPrice per unit  c  ≤ b\nPrice per unit  d  ≤ c</div>Note this is a rule about <b>price per unit</b>, not about absolute price — the absolute price of course goes up with size. The logic is the shopper’s: if a bigger pack were dearer per ml, she has no reason to trade up, and the whole uptrade engine stops. The deck’s own example spans ₹1 for 6 ml to ₹772 for 1000 ml, and the per-unit price falls the whole way down.<br><br>Larger packs <i>can</i> absorb this because their costs behave well — which is the next question.'},
+{t:'pack',tag:'calc',diff:'medium',
+ q:'Lather’s finance team lays out the per-pack economics. Which pack should the brand be pushing hardest, and what is the mechanism behind it?',
+ given:['180 ml · realisation ₹150 · cost ₹60','340 ml · ₹260 · cost ₹85','650 ml · ₹460 · cost ₹120'],
+ opts:['The <b>650 ml</b>, at about <b>74%</b> against 60% on the 180 ml — raw material scales with volume, while packaging and other near-fixed costs spread across more millilitres',
+       'The <b>340 ml</b>, at about 67% — the mid pack is always the margin optimum',
+       'The <b>180 ml</b>, at about 60% — it is the smallest pack and therefore the highest margin',
+       'The <b>180 ml</b>, because it carries the highest price per ml, and price per ml is what margin follows'],
+ why:'<div class="work">180 ml   150 − 60  = 90   →  60.0%\n340 ml   260 − 85  = 175  →  67.3%\n650 ml   460 − 120 = 340  →  73.9%</div>Margin climbs with pack size, and the deck shows the reason in its own cost split: <b>raw material scales with volume</b> (10 → 40 → 100 in the deck’s table), but <b>packaging cost barely moves</b> (15 → 20 → 25) and <b>other costs are near-flat</b> (10 → 15 → 20). Spread those near-fixed components over ten times the volume and cost per ml collapses.<br><br>The last option is the one worth dismantling, because it sounds right. The 180 ml <i>does</i> carry the highest price per ml — that is the price ladder working. But margin is price <i>minus cost</i> per ml, and cost per ml falls faster than price per ml does. High price per ml and low margin sit together perfectly comfortably.'},
 
-{t:'pack',tag:'calc',diff:'easy',
- q:'Three packs of the same product. Which earns the brand the highest <b>profit margin</b>?',
- given:['100 ml · revenue 100 · cost 35','400 ml · revenue 350 · cost 75','1 L · revenue 900 · cost 145'],
- opts:['The 1 L pack, at about 84%','The 400 ml pack, at about 79%','The 100 ml pack, at about 65%','All three are identical — the price ladder holds margin constant'],
- why:'<div class="work">100 ml   100 − 35  = 65   →  65%\n400 ml   350 − 75  = 275  →  79%\n1 L      900 − 145 = 755  →  84%</div>Margin climbs with pack size, and the deck shows why in the cost split. <b>Raw material scales with volume</b> (10 → 40 → 100), but <b>packaging cost barely moves</b> (15 → 20 → 25) and <b>other costs are close to flat</b> (10 → 15 → 20). Those near-fixed components get spread over ten times the volume, so cost per ml collapses even as price per ml falls down the ladder.<br><br>The last option is the one to reason past: the ladder constrains <i>price</i> per unit to fall, which on its own would <i>compress</i> margin — it is the cost curve falling faster that lets the big pack be both cheaper per ml for the shopper and more profitable for the brand.'},
+{t:'pack',tag:'case',diff:'medium',
+ q:'Two households each get through about 650 ml of Lather a year. <b>Household A</b> buys the 650 ml pack once. <b>Household B</b> buys the 180 ml four times. A rival launches an eight-week sampling blitz. Which household is more at risk — and what is the concept?',
+ opts:['<b>B.</b> She reaches a purchase decision four times a year instead of once, so she meets the rival’s campaign more often. The concept is <b>Share of Requirement</b> — a bigger pack locks the household in for longer and gives competitors fewer chances to be bought',
+       '<b>A.</b> A large-pack buyer has more sunk into the decision, so when she does switch she switches harder',
+       'Neither. Switching risk is set by advertising weight, not by pack size',
+       '<b>B</b> — but the concept is the price ladder, which is what is keeping her in small packs'],
+ why:'This is the deck’s <b>SOR</b> slide made concrete. Share of Requirement is the proportion of a household’s category consumption that comes to your brand, and pack size is a lever on it that has nothing to do with advertising: <b>locking in consumers for longer increases share</b>.<div class="work">Household A   1 purchase decision / year\nHousehold B   4 purchase decisions / year\n              → 4× the exposure to a switching moment</div>Same consumption, same brand, four times the risk. Note this is a <i>defensive</i> argument — the deck pairs it with profitability as the second reason to push larger packs, and it is about protecting consumption you already have, not creating more.<br><br>The last option names the right household for the wrong reason: the ladder is the pricing rule across sizes, not an explanation of why she buys small. Her cash outlay per trip is why she buys small.'},
 
-{t:'pack',tag:'concept',diff:'medium',
- q:'Beyond profitability, what is the second reason the deck gives for moving consumers into larger packs?',
- opts:['Sales growth through a higher Share of Requirement — a big pack locks the household in for longer, so competitors get fewer chances to be bought',
-       'Larger packs are cheaper to advertise, since one campaign covers every size',
-       'Larger packs are easier for general trade to stock, because they take less shelf space',
-       'Larger packs attract a lower GST rate, which lifts the brand’s realisation'],
- why:'The deck pairs <b>Profitability</b> with <b>Sales Growth</b>, and the mechanism for growth is <b>Share of Requirement (SOR)</b> — the proportion of a household’s category consumption that goes to your brand. A 1 L pack covers, say, eight weeks of use; a 200 ml pack covers two. Over a twelve-month timeline, the small-pack household reaches a purchase decision six times more often, and each of those is a chance to be switched away. <b>Locking consumers in for longer increases share.</b><br><br>It is worth seeing that this is a share argument, not a volume-per-trip argument: the same consumption is being defended, not created.'},
+{t:'pack',tag:'case',diff:'medium',trap:true,
+ q:'It is 8:40 pm. A shopper has a wedding to leave for at 10. Her shampoo bottle is empty. She walks to the kirana at the end of her lane and buys whatever 10 ml sachets they have, without checking the price. Which <b>shopper mission</b> is this?',
+ opts:['<b>Just in Time</b> — the need appeared without warning, so the pack has to be small, immediately available and in general trade. Price is secondary because availability is the binding constraint',
+       '<b>Experiential</b> — she is buying for a wedding, and an occasion purchase is an experiential mission',
+       '<b>Routine Purchase</b> — shampoo is a product she buys every month',
+       '<b>Research</b> — she is choosing between the sachet options on the shelf'],
+ why:'The mission is defined by <b>how she is shopping</b>, not by what the product is or what the occasion is. The deck’s four:<div class="work">Routine       the monthly shop, with a list\nJust in Time  snacks for an impromptu party\nExperiential  apparel for an upcoming event\nResearch      buying a new phone</div>Everything here says Just in Time: unplanned, urgent, nearest store, no price check. The <b>Experiential</b> answer is the trap — a wedding sounds like the deck’s “upcoming event”, but that example is about <i>treating yourself</i>, where the shopping itself is the pleasurable part. Nothing about a 8:40 pm sachet run is that. And Routine is ruled out by the same product being bought in a completely different mode — she buys shampoo monthly, but she is not doing that tonight.<br><br>The pack consequence is the point of the whole slide: this trip is where a 10 ml sachet in general trade earns its existence, and no amount of 650 ml value-pack economics is relevant to it.'},
 
-{t:'pack',tag:'apply',diff:'easy',
- q:'A shopper realises twenty minutes before friends arrive that she has no snacks, and buys whatever the nearest store has. Which of the deck’s four <b>shopper missions</b> is this?',
- opts:['Just in Time','Routine Purchase','Experiential','Research'],
- why:'The deck’s four missions, each with its example:<div class="work">Routine Purchase  the monthly shop, with a list\nJust in Time      snacks for an impromptu party\nExperiential      treating yourself to apparel for\n                  an upcoming event\nResearch          buying a new phone</div>The mission is what decides the pack. A <b>Just in Time</b> trip wants a small, immediately consumable pack in the nearest store — sachets and single-serves in general trade, and price is a secondary concern because availability is the binding constraint. The <b>Routine</b> shopper on the same category buys the 1 L value pack in modern trade. Same consumer, same brand, different pack — which is precisely why the deck insists on <b>shopper-backward thinking</b> on pack sizes.'},
+{t:'pack',tag:'case',diff:'medium',
+ q:'Lather’s new head of sales proposes killing the 10 ml sachet: it is <b>22% of volume but 6% of profit</b>, and the warehouse hates handling it. What does the course say about that trade?',
+ opts:['The sachet is the <b>recruit</b> rung — the low-cash-outlay entry that brings consumers in so they can be uptraded. Killing it lifts margin per pack while shutting off the funnel that feeds the ladder; a brand needs to recruit across pack sizes <i>as well as</i> uptrade',
+       'He is right. Only the largest pack matters, since it carries both the highest margin and the highest SOR',
+       'He is right, and the freed shelf space will uptrade sachet buyers into the 180 ml automatically',
+       'He is wrong, because removing a rung is itself a breach of the price ladder'],
+ why:'The deck draws <b>recruit</b> and <b>uptrade</b> arrows across the pack ladder, and marks recruit at more than one rung. The sachet’s job is not to make money — it is to be a low-risk first purchase for someone who has never bought you. Its 6% profit share is what recruitment looks like on a P&L, not evidence that it is failing.<div class="work">Recruit   small packs — low cash outlay, low risk\nUptrade   move her up the ladder once she is in\n          → better margin, better SOR</div>The deck’s takeaway settles it: <b>a brand needs to recruit across pack sizes as well as uptrade.</b><br><br>The third option contains the real-world temptation and the real-world error: uptrade is something you have to <i>engineer</i>, through the ladder and the range. Take away the entry rung and a large share of those buyers do not step up — they step out, to whichever competitor still sells a sachet. And removing a pack size does not breach the ladder; the ladder constrains prices across the sizes you do sell.'},
 
-{t:'pack',tag:'apply',diff:'medium',
- q:'The deck draws <b>recruit</b> and <b>uptrade</b> arrows across a pack-size ladder. What is the role of each end?',
- opts:['Small packs recruit new consumers at a low cash outlay; larger packs uptrade them once they are in — and a brand needs both',
-       'Small packs uptrade existing loyalists; large packs recruit new consumers by looking like better value',
-       'Only the largest pack matters, since it carries the highest margin — the small packs should be discontinued',
-       'Recruit and uptrade are two names for the same move: getting a shopper into a bigger pack'],
- why:'<b>Recruit</b> at the bottom: a small pack is a low-risk, low-cash-outlay trial for someone who has never bought you. <b>Uptrade</b> upward: once she is in, move her up the ladder, where SOR and margin both improve. The deck’s diagram deliberately marks recruit at more than one rung — you recruit into the mid pack too, from a different set of consumers.<br><br>The “discontinue the small packs” answer is the live temptation and the deck rules it out: <b>a brand needs to recruit across pack sizes as well as uptrade.</b> Kill the entry rung and margin per pack looks better while the funnel that feeds the ladder quietly dries up.'},
+{t:'pack',tag:'case',diff:'medium',trap:true,
+ q:'To fight a cheap rival, Lather launches a <b>90 ml “value pack” at ₹63</b>, alongside its 180 ml at ₹149 and 340 ml at ₹250. Six months on: the 90 ml sells well, <b>total brand volume is flat</b>, and 180 ml and 340 ml volumes are both down. What has happened?',
+ given:['90 ml ₹63 → ₹0.70/ml','180 ml ₹149 → ₹0.83/ml','340 ml ₹250 → ₹0.74/ml'],
+ opts:['<b>Active downgradation from self.</b> Priced below the larger packs per ml, the value pack inverted the ladder — so instead of recruiting new users it pulled existing buyers down into a lower-value pack',
+       'The rival’s campaign has worked and Lather has lost share. The value pack is unrelated to the decline',
+       'The value pack is working exactly as intended — recruitment always shows up as flat volume in year one',
+       'The 90 ml is loss-making, because packaging cost per ml is highest on the smallest pack, and that is what dragged volume down'],
+ why:'The deck’s warning slide carries two lines, and this is the second: <b>reducing pack sizes can lead to active downgradation from self.</b> The signature is exactly what the case reports — the new pack sells, the big packs fall, and the total does not move. Nobody new arrived; your own buyers changed rungs.<br><br>Look at what the pricing did:<div class="work">90 ml   ₹0.70 /ml   ← cheapest per ml. Ladder inverted.\n180 ml  ₹0.83 /ml\n340 ml  ₹0.74 /ml</div>A correctly laddered 90 ml would be the <b>dearest</b> per ml — above ₹0.83. That premium is not greed; it is the <b>guardrail</b> that makes stepping down unattractive to a 340 ml buyer. Price the small pack attractively per ml and you have personally removed the thing stopping the downgrade.<br><br>The last option is true and irrelevant: packaging cost per ml <i>is</i> highest on small packs — which is why they are supposed to carry the highest price per ml, not why volume fell.'},
 
-{t:'pack',tag:'apply',diff:'medium',trap:true,
- q:'A brand adds a cheap small pack, priced attractively <i>per ml</i>, hoping to recruit new users. The deck flags a specific risk. Which one?',
- opts:['Active downgradation from self — your own larger-pack buyers move down the ladder, so volume re-buckets into a lower-value pack instead of new users coming in',
-       'The pack will necessarily be loss-making, because packaging cost per ml is higher on small packs',
-       'Modern trade will refuse to list it, because it takes shelf space from the large pack',
-       'It breaches the price ladder, which is prohibited under Indian packaging regulation'],
- why:'The deck’s warning slide carries two lines: <b>scan for competition — you are not operating in isolation</b>, and <b>reducing pack sizes can lead to active downgradation from self</b>. Recruitment only pays if the small pack brings in people who were not buying you. If it mostly re-buckets your existing buyers, you have cut realisation per consumer <i>and</i> shortened their purchase cycle, losing on both margin and SOR.<br><br>Notice what the price ladder is doing here — it is the guardrail. A correctly laddered small pack is the <b>most expensive per ml</b>, and that premium is what stops a large-pack buyer from stepping down. Pricing the small pack attractively per ml inverts the ladder and removes the guardrail, which is exactly how downgradation gets invited in. It is a commercial mistake, not a legal one, and packaging cost per ml being higher on small packs is true but does not make them loss-making — it is why they carry the higher per-ml price.'},
+{t:'pack',tag:'case',diff:'medium',
+ q:'Lather pushes its single 340 ml bottle through all three channels. Results: strong in modern trade · kirana owners say it “blocks too much money” · on quick commerce it keeps losing to a rival’s 2 × 340 ml bundle. What is the diagnosis?',
+ opts:['Packs have to be <b>customised by channel</b>. General trade needs a low cash-outlay pack the kirana can afford to stock and the shopper can afford to buy; eCommerce economics reward bundles and larger packs. One SKU cannot serve all three',
+       'This is a Promotion problem — the same media plan is running across all three channels',
+       'Nothing is wrong. A single pack size cannot breach the price ladder, so the architecture is sound',
+       'Lather should exit general trade and quick commerce and concentrate where it already wins'],
+ why:'The deck is explicit: packs are customised for <b>General Trade</b>, <b>Modern Trade</b> and <b>eCommerce</b>, and the case gives you one symptom from each. “Blocks too much money” is the kirana’s working-capital constraint — he stocks what turns fast at low value per unit, which is why sachets and small bottles exist. Losing to a bundle online is shipping economics — a delivery cost per order that rewards buying more at once.<br><br>Note that all three results are consistent with the 340 ml being a <i>good</i> pack. It is simply the only pack, and it happens to fit exactly one channel. The fix is range, not retreat — and “concentrate where you already win” would hand a brand two-thirds of a market for the sake of not building two more SKUs.'},
 
-{t:'pack',tag:'concept',diff:'medium',
- q:'The deck says every pack decision has to balance three sets of objectives. Whose?',
- opts:['The brand’s, the shopper’s and the channel’s',
-       'The brand’s, the manufacturer’s and the regulator’s',
-       'The shopper’s, the competitor’s and the investor’s',
-       'Marketing’s, finance’s and supply chain’s'],
- why:'<b>Brand objective</b> — recruit, uptrade, protect RPI. <b>Shopper objective</b> — the pack that fits her mission and her cash outlay. <b>Channel objective</b> — what the retailer needs to stock and sell it. The three pull in different directions, and the two decisions you actually make — <b>pack format</b> and <b>pack quantity–price</b> — are where the trade-off gets resolved.<br><br>The channel leg is the one people drop, and the deck spells it out: packs are customised for <b>general trade</b>, <b>modern trade</b> and <b>eCommerce</b>. A sachet that works in a kirana is dead weight in an eCommerce basket where shipping economics push toward bulk; the multipack modern trade wants will not fit a general-trade counter.'},
+{t:'pack',tag:'case',diff:'medium',
+ q:'Three memos land on the same pack decision. <b>Brand:</b> move everyone to the 650 ml — it lifts RPI and SOR. <b>Shopper research:</b> most target households cannot spend ₹460 in one go. <b>Channel:</b> kiranas will not stock anything above ₹100 a unit. What is this, and what does the course say to do?',
+ opts:['The three objectives every pack decision has to balance — <b>brand, shopper and channel</b>. You resolve it across the two decisions available (pack format, and pack quantity–price): a laddered range that recruits at low cash outlay in general trade and uptrades into the 650 ml where shopper and channel can carry it',
+       'The brand objective outranks the other two, since the brand carries P&amp;L responsibility',
+       'It is a pricing problem alone — drop the 650 ml to ₹99 and all three objectives are satisfied at once',
+       'It is a Place problem — exit general trade, whose objectives conflict with the brand’s'],
+ why:'The deck’s slide is three overlapping circles: <b>Brand objective · Shopper objective · Channel objective</b>, with the note that packaging decisions have to balance all three. And it names the only two levers you actually have: <b>pack format</b> and <b>pack quantity–price</b>.<br><br>The resolution is a <i>range</i>, not a winner. That is what the whole pack architecture exists to do — a sachet or small bottle under ₹100 that the kirana will stock and the household can afford, laddered up to a 650 ml that delivers the brand’s RPI and SOR ambition in modern trade and quick commerce, where both the shopper’s basket and the channel can carry it.<br><br>Dropping the 650 ml to ₹99 is worth thinking through: it would satisfy everyone and destroy the ladder, the margin and the RPI goal in one move — you cannot solve a three-way constraint by conceding the objective you started with. And <b>shopper-backward thinking</b> is the deck’s framing for exactly this: start from the mission and the cash outlay, not from the pack you would prefer to sell.'},
 
 ];
 
@@ -566,6 +590,13 @@ const BADGES=[
    Every framework in Sessions 8-12, reduced to the line you need in the exam.
    ========================================================================= */
 const CMAP=[
+ {h:'The cast — the brands used in the cases',
+  note:'All invented, so nothing turns on outside knowledge. Every question is answerable from the frameworks alone.',
+  rows:[
+   ['Lather','a challenger shampoo brand in India — the running case','used for the mix, RPI, demand spaces and the whole pack-price section'],
+   ['Silk · Purely','its two rivals — Silk the mid-priced fragrance play, Purely the premium end','they supply the category average that RPI is measured against'],
+   ['CrunchLab','a protein-bar startup','used for product levels, the proposition/product pairing and the blind test']]},
+
  {h:'The 6P marketing mix — with Surf excel filled in',
   note:'Six Ps, not four. Packaging and Proposition are the additions. Positioning is NOT a P — it sits upstream in STP, and Proposition is what carries it into the mix.',
   rows:[
@@ -872,7 +903,7 @@ function buildSidebar(){
 
   /* scope switch — sits above the section list */
   const all=el('div','topic scope'+(FOCUS?'':' on'));
-  all.innerHTML='<span class="idx">◎</span><span class="nm">All sections<small>'+QUIZ.length+' questions · full paper</small></span>';
+  all.innerHTML='<span class="idx">◎</span><span class="nm">All sections<small>'+QUIZ.length+' cases · full paper</small></span>';
   all.onclick=()=>setScope('all');
   list.appendChild(all);
 
@@ -962,19 +993,24 @@ function renderQuiz(){
   ACTIVE.forEach(q=>quizState.per[q.t].n++);
   const intro=el('div','card');
   const scopeName = FOCUS ? (TOPICS.find(t=>t.id===FOCUS)||{}).name : null;
-  intro.innerHTML='<div class="eyebrow">'+(FOCUS?'Focused practice · '+scopeName:'Full paper · Sessions 8–12')+'</div>'+
+  intro.innerHTML='<div class="eyebrow">'+(FOCUS?'Focused practice · '+scopeName:'Case paper · Sessions 8–12')+'</div>'+
     '<h1 class="tt">'+(FOCUS?scopeName+' 🎯':'Marketing Management — Quiz II 🧠')+'</h1>'+
     '<div class="sub">'+(FOCUS
-      ? 'Just this section — <b>'+ACTIVE.length+' questions</b>. Use the sidebar to switch sections, or hit <b>All sections</b> to sit the full paper.'
-      : '<b>'+ACTIVE.length+' questions</b> across <b>four sections</b>, covering the ground after Quiz I: <b>Sessions 8–12</b> — brand and the 6P mix, '+
+      ? 'Just this section — <b>'+ACTIVE.length+' cases</b>. Use the sidebar to switch sections, or hit <b>All sections</b> to sit the full paper.'
+      : '<b>'+ACTIVE.length+' cases</b> across <b>four sections</b>, covering the ground after Quiz I: <b>Sessions 8–12</b> — brand and the 6P mix, '+
         'proposition, product levels and price, the product mix, and pack-price architecture. '+
         'Click any section in the sidebar to practise just that block.')+'</div>'+
-    '<div class="sub" style="margin-top:10px">Pitched <b>low to moderate</b>, like the Quiz I paper — recall of the frameworks, plus small applied and numerical questions '+
-    '(RPI, pack margins) where the deck itself does the arithmetic. Nothing here needs a formula you have not seen on a slide.</div>'+
+    '<div class="sub" style="margin-top:10px">Every question is a <b>case</b>, not a definition. A decision is on the table, or a colleague has just said something confident and wrong, '+
+    'and you have to say what is actually going on — the same shape as the Quiz I paper. '+
+    'The brands are <b>invented</b> — <b>Lather</b>, a challenger shampoo, with rivals <b>Silk</b> and <b>Purely</b>; and <b>CrunchLab</b>, a protein-bar startup — '+
+    'so nothing turns on what you happen to know about the real market. The frameworks carry every answer.</div>'+
+    '<div class="sub" style="margin-top:10px">Pitched <b>low to moderate</b>. The four numerical cases (RPI, price per ml, the price ladder, pack margins) use only arithmetic the decks '+
+    'work through on a slide — no formula here is one you have not already seen.</div>'+
     '<div class="sub" style="margin-top:10px">Instant feedback with the full reasoning in the <b>Why</b> panel — that panel is the revision, not the score. '+
-    'Options are reshuffled every attempt, so the answer is never always “A”. '+
-    'Watch for the <span class="tag trap" style="margin:0">🃏 tricky</span> tag — those '+TRAPS+' questions sit on the distinctions that get mixed up most '+
-    '(Proposition is a P, Positioning is not · the media is Promotion, the idea is Proposition · RPI needs price <i>per ml</i> · a blind test proves features, not performance · '+
+    'It always works the wrong options too, because on a case paper the distractor is usually the thing a real team would have said in the meeting. '+
+    'Options reshuffle every attempt, so the answer is never always “A”. '+
+    'Watch for the <span class="tag trap" style="margin:0">🃏 tricky</span> tag — those '+TRAPS+' cases turn on a distinction that is easy to get backwards '+
+    '(a discount is not a proposition · price per ml, not per pack · a blind test proves features, not performance · a wedding is not an Experiential mission · '+
     'a cheap small pack recruits your own buyers downward).</div>'+
     '<div class="sub" style="margin-top:10px">Stuck? Hit <b>📋 mix</b> in the header for the cheat-sheet — the 6Ps with Surf excel filled in, the four product levels, the RPI formula and every pack-price rule. '+
     'Answer with the mouse or press <b>1–4</b> / <b>A–D</b>. Get it right and the crackers go off 🎆 — '+
@@ -986,7 +1022,7 @@ function renderQuiz(){
   TOPICS.forEach((t,ti)=>{
     const qs=ACTIVE.filter(q=>q.t===t.id);if(!qs.length)return;
     const h=el('div','qgroup-h');h.id='grp-'+t.id;
-    h.innerHTML='<span class="gi">'+String(ti+1).padStart(2,'0')+'</span><span class="gt">'+t.name+(t.hot?' 🔥':'')+'</span><span class="gc">'+qs.length+' questions</span>';
+    h.innerHTML='<span class="gi">'+String(ti+1).padStart(2,'0')+'</span><span class="gt">'+t.name+(t.hot?' 🔥':'')+'</span><span class="gc">'+qs.length+' cases</span>';
     m.appendChild(h);
     qs.forEach(q=>{n++;
       const card=el('div','qcard');
